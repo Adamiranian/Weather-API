@@ -52,3 +52,14 @@ var loadCity = function(){
                 containerHistoricCities.appendChild(ulElement); 
             }
 };
+
+
+
+$(document).on("click", ".list-group-item", function(event) {
+
+    event.preventDefault();
+
+   
+    var city = $(this).attr("attr");
+    callApiFetch(city);
+});
